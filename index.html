@@ -16,19 +16,21 @@
         <h1>
             Search for a City
         </h1>
-        <form action=>
-            <input id="city" type="text" placeholder="San Diego"><br><br>
-            <input id="city-button" type="submit" value="Search">
-        </form>
+        <input id="city-input" type="text" placeholder="San Diego"><br><br>
+        <input id="city-button" type="submit" value="Search">
         <hr>    
     </div>
     <!--Store data-->
     <div id="cities"></div>
     <!--Current Default City day's weather data/city they select-->
-    <div id="main-city">
-        <h1>Chicago <span id="current-date"></span>
+    <div>
+        <h1 id="main-city"> <span id="current-date"></span>
             <span id="current-emoji"></span>
         </h1>
+        <p id="main-temp"></p>
+        <p id="main-wind"></p>
+        <p id="main-hum"></p>
+        <p id="main-uvi"></p>
     </div>
     <!--5 day forecast-->
     <div id="five-day"></div>
