@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <script defer src="./assets/js/main.js"></script>
+    <h1>
+        Weather Dashboard 
+    </h1>
+    <!--Search for a City-->
+    <div>
+        <h1>
+            Search for a City
+        </h1>
+        <form action=>
+            <input type="text" placeholder="San Diego"><br><br>
+            <input type="submit" value="Search">
+        </form>
+        <hr>    
+    </div>
+    <!--Store data-->
+    <div id="cities"></div>
+    <!--Current Default City day's weather data/city they select-->
+    <div id="main-city">
+        <h1>Chicago <span id="current-date"></span>
+            <span id="current-emoji"></span>
+        </h1>
+    </div>
+    <!--5 day forecast-->
+    <div id="five-day"></div>
+</body>
+</html>
