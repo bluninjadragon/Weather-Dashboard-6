@@ -31,6 +31,7 @@ function fetchCoord() {
     .catch(error => console.log('error', error)); 
 }
 
+//function to add weather object data to the CURRENT forecast in main card of dashbaord
 function fetchWeather(lat, lon) {
   let requestOptions = {
     method: 'GET',

@@ -8,43 +8,47 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Weather Dashboard</title>
 </head>
-<body>
+<body class="">
     <script defer src="./assets/js/main.js"></script>
-    <h1>
+    <h1 class="container is-fluid">
         Weather Dashboard 
     </h1>
-    <!--Search for a City-->
-    <section>
-        <h1>
-            Search for a City
-        </h1>
-        <input id="city-input" type="text" placeholder="Chicago"><br><br>
-        <input id="city-button" type="submit" value="Search">
-        <hr>
-        <!--storage cards appendage--> 
-        <div></div>   
-    </section>
-    <!--Store data-->
-    <div id="cities"></div>
-    <!--Current Default City day's weather data/city they select-->
-    <div>
-        <h1 id="main-city">Chicago<span id="current-date"></span>
-            <span id="current-emoji"></span>
-        </h1>
-        <p id="main-temp">Temp</p>
-        <p id="main-wind">Wind</p>
-        <p id="main-hum">Humidity</p>
-        <p id="main-uvi">UV Index</p>
-    </div>
-    <!--5 day forecast-->
-    <section>
-        <div id="one-day">
-            <h1 id=date-one></h1>
-            <p id="one-temp"></p>
-            <p id="one-wind"></p>
-            <p id="one-humidity"></p>
+    <main class="columns">
+        <!--Search for a City-->
+        <section class="column is-one-quarter">
+            <h2>
+                Search for a City
+            </h2>
+            <input id="city-input" type="text" placeholder="Chicago"><br><br>
+            <input id="city-button" type="submit" value="Search">
+            <hr>
+            <!--storage cards appendage--> 
+            <!--Store data-->
+            <div id="cities"></div>
+        </section>
+        <!--Current Default City day's weather data/city they select-->
+        <section class="column is-three-quarters">
+        <div>
+            <h2 id="main-city">Chicago<span id="current-date"></span>
+                <span id="current-emoji"></span>
+            </h2>
+            <p id="main-temp">Temp</p>
+            <p id="main-wind">Wind</p>
+            <p id="main-hum">Humidity</p>
+            <p id="main-uvi">UV Index</p>
         </div>
-    </section>
+        <!--5 day forecast-->
+        <div class="card">
+            <article id="one-day" class="card-content">
+                <h1 id=date-one></h1>
+                <p id="one-temp"></p>
+                <p id="one-wind"></p>
+                <p id="one-humidity"></p>
+            </article>
+        </div>
+        </section>
+    </main>
+    
     
 </body>
 </html>
