@@ -13,14 +13,14 @@
     <h1 class="container is-fluid">
         Weather Dashboard 
     </h1>
-    <main class="columns">
+    <main class="columns content is-medium">
         <!--Search for a City-->
         <section class="column is-one-quarter">
             <h2>
-                Search for a City
+                Search a City
             </h2>
-            <input id="city-input" type="text" placeholder="Chicago"><br><br>
-            <input id="city-button" type="submit" value="Search">
+            <input class="input is-info" id="city-input" type="text" placeholder="Chicago"><br><br>
+            <input class="button is-primary is-fullwidth" id="city-button" type="submit" value="Search">
             <hr>
             <!--storage cards appendage--> 
             <!--Store data-->
@@ -36,14 +36,40 @@
             <p id="main-wind">Wind</p>
             <p id="main-hum">Humidity</p>
             <p id="main-uvi">UV Index</p>
+            <br>
+            <br>
         </div>
         <!--5 day forecast-->
-        <div class="card">
-            <article id="one-day" class="card-content">
-                <h1 id=date-one></h1>
+        <div class="columns content is-normal">
+            <article id="one-day" class="message is-dark column">
+                <h3 id=date-one class="message-body"></h3>
                 <p id="one-temp"></p>
                 <p id="one-wind"></p>
                 <p id="one-humidity"></p>
+            </article>
+            <article id="two-day" class="column">
+                <h3 id=date-two></h3>
+                <p id="two-temp"></p>
+                <p id="two-wind"></p>
+                <p id="two-humidity"></p>
+            </article>
+            <article id="three-day" class="column">
+                <h3 id=date-three></h3>
+                <p id="three-temp"></p>
+                <p id="three-wind"></p>
+                <p id="three-humidity"></p>
+            </article>
+            <article id="four-day" class="column">
+                <h3 id=date-four></h3>
+                <p id="four-temp"></p>
+                <p id="four-wind"></p>
+                <p id="four-humidity"></p>
+            </article>
+            <article id="five-day" class="column">
+                <h3 id=date-five></h3>
+                <p id="five-temp"></p>
+                <p id="five-wind"></p>
+                <p id="five-humidity"></p>
             </article>
         </div>
         </section>
