@@ -5,7 +5,11 @@ const mainTemp = document.querySelector("#main-temp");
 const mainWind = document.querySelector("#main-wind");
 const mainHum = document.querySelector("#main-hum");
 const mainUVI = document.querySelector("#main-uvi");
+const dateOne = document.querySelector("#date-one");
 const oneTemp = document.querySelector("#one-temp");
+const oneWind = document.querySelector("#one-wind");
+const oneHum = document.querySelector("#one-humidity");
+
 
 function fetchCoord() {
   let requestOptions = {
@@ -39,9 +43,9 @@ function fetchWeather(lat, lon) {
       const weather = JSON.parse(result);
       console.log(weather)
       mainCity.textContent = cityInput.value;
-      mainTemp.textContent = `Temp: ${weather.current.temp} °F`;
-      mainWind.textContent = `Wind: ${weather.current.wind_speed} mph`;
-      mainHum.textContent = `Humidity: ${weather.current.humidity} %`;
+      mainTemp.textContent = `Temp: ${weather.current.temp}°F`;
+      mainWind.textContent = `Wind: ${weather.current.wind_speed}mph`;
+      mainHum.textContent = `Humidity: ${weather.current.humidity}%`;
       mainUVI.textContent = `UV Index: ${weather.current.uvi}`;
 
       fdForecast(weather);
@@ -49,14 +53,28 @@ function fetchWeather(lat, lon) {
     .catch(error => console.log('error', error));
 }
 
+//function to add weather object data into each card for 5 day forecast
+//start on the second day, as the current day has already been captured in main dashboard
+
 function fdForecast(weather) {
+  console.log(weather.daily[1].dt);
   console.log(weather.daily[1].temp.day);
   console.log(weather.daily[1].wind_speed);
   console.log(weather.daily[1].humidity);
 
-  oneTemp.textContent = `Temp: ${weather.current.temp} °F`;
+  //unix date conversion was taken from codesource.io. epoch date needs to * 1000 for formula to work
+  let unixDate = (weather.daily[1].dt)*1000;
+
+  let formattedDate = (new Intl.DateTimeFormat("en-us").format(unixDate));
+
+
+  dateOne.textContent = formattedDate;
+  oneTemp.textContent = `Temp: ${weather.daily[1].temp.day}°F`;
+  oneWind.textContent = `Wind: ${weather.daily[1].wind_speed}mph`;
+  oneHum.textContent = `Humidity: ${weather.daily[1].humidity}%`;
   
 }
+
 
 
 //event listeners for button
