@@ -3,7 +3,7 @@
 Built by Jason Hsieh
 
 A simple web application that allows users to search for various cities around the world and obtain data for temperature, wind, humidity, and UV Index in a UI friendly dashboard
-![Screen Shot]()
+![Screen Shot](https://github.com/bluninjadragon/Weather-Dashboard-6/blob/main/assets/Version%201.0%20Weather%20App.png)
 
 # Technologies Used
 
