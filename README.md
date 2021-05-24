@@ -3,7 +3,7 @@
 Built by Jason Hsieh
 
 A simple web application that allows users to search for various cities around the world and obtain data for temperature, wind, humidity, and UV Index in a UI friendly dashboard
-![Screen Shot](hw6\Weather-Dashboard-6\assets\06-server-side-apis-homework-demo.png)
+![Screen Shot]()
 
 # Technologies Used
 
@@ -27,7 +27,11 @@ The application can be accessed at https://github.com/bluninjadragon/Weather-Das
 
 # Known Bugs
 
-There are no known bugs at this time.
+Need to add for loops for all cards involved in 5 day forecast
+
+Need to Update "Search City" so it's always mixed case in the Dashboard. Also would prefer to press "enter" to get the search results to populate
+
+Need to add the storage component
 
 # License
 
